@@ -40,7 +40,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "8005:8000"   # "바깥포트:컨테이너포트" --> 바깥에서 8005번으로 오면 컨테이너의 8000번(FastAPI)으로 전달
+      - "80:8000"   # "바깥포트:컨테이너포트" --> 바깥에서 80번으로 오면 컨테이너의 8000번(FastAPI)으로 전달
 
     environment:
       # 컨테이너 안에서 db에 접속할 때는 localhost가 아니라 서비스 이름 "db"를 주소로 쓴다
